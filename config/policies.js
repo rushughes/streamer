@@ -35,9 +35,20 @@ module.exports.policies = {
   *                                                                          *
   ***************************************************************************/
 
-  'PostController': {
-    '*': 'isAuthenticated'
-  },
+  //'PostController': {
+  //  '*': 'isAuthenticated'
+  //},
+
+  /***************************************************************************
+  *                                                                          *
+  * Only allow authenticated in users to access the UploadController          *
+  * /upload is now protected                                                   *
+  *                                                                          *
+  ***************************************************************************/
+
+  //'UploadController': {
+  //  '*': 'isAuthenticated'
+  //},
 
   /***************************************************************************
   *                                                                          *

@@ -46,7 +46,17 @@ module.exports.routes = {
 
   'get /signup': {
     view: 'signup'
-  }
+  },
+
+  'get /upload': {
+    view: 'upload'
+  },
+
+  'post /upload': 'UploadController.upload',
+
+  'get /play': {
+    view: 'play'
+  },
 
   /***************************************************************************
   *                                                                          *
