@@ -48,9 +48,7 @@ module.exports.routes = {
     view: 'signup'
   },
 
-  'get /upload': {
-    view: 'upload'
-  },
+  'get /upload': 'UploadController.get',
 
   'post /upload': 'UploadController.upload',
 
@@ -59,6 +57,8 @@ module.exports.routes = {
   },
 
   '/api/notify': 'NotifyController.notify',
+
+  'post /user': 'UserController.signup',
 
   /***************************************************************************
   *                                                                          *

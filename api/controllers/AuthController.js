@@ -25,7 +25,11 @@
                  });
              }
              req.logIn(user, function(err) {
-                 if (err) res.send(err);
+                 if (err) {
+                   sails.log.error("req.login failed: ", err);
+                   res.send(err);
+                 }
+                 req.session.authenticated = true;
                  return res.send({
                      message: info.message,
                      user: user

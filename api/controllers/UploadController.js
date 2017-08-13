@@ -26,6 +26,10 @@ module.exports = {
         textParams: req.params.all()
       });
     });
-  }
+  },
+
+	get: function (req, res) {
+		res.view('upload');
+	}
 
 };
