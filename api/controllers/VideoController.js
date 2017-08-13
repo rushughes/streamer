@@ -54,4 +54,15 @@ module.exports = {
 
 	  });
   },
+
+	getAll: function (req, res) {
+		Video.find({}).exec(function (err, videos) {
+			if (err) {
+				sails.log.error('video.find error: ', err);
+			} else {
+				sails.log.debug('found videos: ', videos);
+				res.view('videos', { videos: videos });
+			}
+		})
+	}
 };

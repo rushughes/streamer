@@ -62,6 +62,8 @@ module.exports.routes = {
 
   'post /video': 'VideoController.upload',
 
+  'get /videos': 'VideoController.getAll',
+
   /***************************************************************************
   *                                                                          *
   * Custom routes here...                                                    *
