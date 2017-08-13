@@ -58,6 +58,8 @@ module.exports.routes = {
     view: 'play'
   },
 
+  '/api/notify': 'NotifyController.notify',
+
   /***************************************************************************
   *                                                                          *
   * Custom routes here...                                                    *
