@@ -5,12 +5,39 @@
 </video-->
 
 
-<div class="flowplayer">
+<!--div class="flowplayer"-->
+    <!--video>
+      <source type="video/mp4" src="https://s3-us-west-2.amazonaws.com/streamer-dev-huijfdsasdf/small.mp4" />
+    </video>
     <video>
-      <source type="video/mp4"
-              src="https://s3-us-west-2.amazonaws.com/streamer-dev-huijfdsasdf/small.mp4">
-      </video>
-      <!--source type="application/x-mpegurl"
-              src="https://s3-us-west-2.amazonaws.com/streamer-dev-huijfdsasdf-hls/dev/small.m3u8">
-      </video-->
-  </div>
+      <source type="application/x-mpegurl" src="https://s3-us-west-2.amazonaws.com/streamer-dev-huijfdsasdf-hls/dev/small.m3u8" />
+    </video-->
+
+    <!--video>
+      <source type="video/mp4" src="<%- video.location %>">
+    </video-->
+
+    <!--video>
+      <source type="application/x-mpegurl" src="https://s3-us-west-2.amazonaws.com/streamer-dev-huijfdsasdf-hls/<%- video.outputKeyPrefix %>/<%- video.playlist %>">
+    </video-->
+  <!--/div-->
+<div><a href="<%- video.location %>">Download</a></div>
+
+<div id="player"></div>
+
+<script>
+// select the above element as player container
+var container = document.getElementById("player");
+
+// install flowplayer into selected container
+flowplayer(container, {
+    clip: {
+        sources: [
+              { type: "application/x-mpegurl",
+                src:  "https://s3-us-west-2.amazonaws.com/streamer-dev-huijfdsasdf-hls/<%- video.outputKeyPrefix %>/<%- video.playlist %>" },
+              { type: "video/mp4",
+                src:  "<%- video.location %>" }
+        ]
+    }
+});
+</script>

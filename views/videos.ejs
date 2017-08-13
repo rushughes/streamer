@@ -1,0 +1,8 @@
+<div>
+  <h1>Videos</h1>
+    <ul>
+    <% _.each(videos, function (v) { %>
+    <li><%= v.owner %> <a href="/play/<%= v.id %>"><%= v.filename %></a></li>
+    <% }) %>
+  </ul>
+</div>

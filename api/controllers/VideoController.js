@@ -64,5 +64,18 @@ module.exports = {
 				res.view('videos', { videos: videos });
 			}
 		})
+	},
+
+	play: function (req, res) {
+		var videoid = req.param('videoid');
+		sails.log.debug('Looking for video with id: '. videoid);
+		Video.find({id: videoid}).exec(function (err, video) {
+			if (err) {
+				sails.log.error('video.find error: ', err);
+			} else {
+				sails.log.debug('found video: ', video);
+				res.view('play', { video: video[0] });
+			}
+		})
 	}
 };

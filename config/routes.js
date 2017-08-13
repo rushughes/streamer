@@ -52,9 +52,7 @@ module.exports.routes = {
 
   'post /upload': 'UploadController.upload',
 
-  'get /play': {
-    view: 'play'
-  },
+  'get /play/:videoid': 'VideoController.play',
 
   '/api/notify': 'NotifyController.notify',
 
