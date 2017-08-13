@@ -48,14 +48,41 @@ module.exports = {
         type: 'string',
         required: true,
     },
-    size: {
+    extraSize: {
         type: 'integer',
         required: true,
     },
     owner: {
       model: 'user',
       required: true
-    }
-
+    },
+    outputKeyPrefix: {
+        type: 'string',
+        required: false,
+    },
+    thumbnailPattern: {
+        type: 'string',
+        required: false,
+    },
+    segmentDuration: {
+        type: 'integer',
+        required: false,
+    },
+    duration: {
+        type: 'integer',
+        required: false,
+    },
+    width: {
+        type: 'integer',
+        required: false,
+    },
+    height: {
+        type: 'integer',
+        required: false,
+    },
+    playlist: {
+        type: 'string',
+        required: false,
+    },
   }
 };
