@@ -15,7 +15,8 @@ module.exports = {
       adapter: require('skipper-s3'),
       key: sails.config.s3.key,
       secret: sails.config.s3.secret,
-      bucket: sails.config.s3.bucket
+      bucket: sails.config.s3.bucket,
+			dirname: sails.config.s3.dirname
     }, function (err, filesUploaded) {
 			sails.log.debug(err);
 			sails.log.debug(filesUploaded);
