@@ -33,7 +33,7 @@
           //for now we assuem all messages are from Transcoder
           var message = JSON.parse(req.body.Message);
           Video.update({key: message.input.key}, {
-            outputKeyPrefix: outputKeyPrefix,
+            outputKeyPrefix: message.outputKeyPrefix,
             thumbnailPattern: message.outputs[0].thumbnailPattern,
             segmentDuration: message.outputs[0].segmentDuration,
             duration: message.outputs[0].duration,
