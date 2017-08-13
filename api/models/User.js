@@ -19,6 +19,10 @@ module.exports = {
             minLength: 8,
             required: true
         },
+        videos: {
+          collection: 'video',
+          via: 'owner'
+        },
         toJSON: function() {
             var obj = this.toObject();
             delete obj.password;

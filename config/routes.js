@@ -60,6 +60,8 @@ module.exports.routes = {
 
   'post /user': 'UserController.signup',
 
+  'post /video': 'VideoController.upload',
+
   /***************************************************************************
   *                                                                          *
   * Custom routes here...                                                    *
