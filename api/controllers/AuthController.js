@@ -30,10 +30,7 @@
                    res.send(err);
                  }
                  req.session.authenticated = true;
-                 return res.send({
-                     message: info.message,
-                     user: user
-                 });
+                 return res.redirect('/upload');
              });
 
          })(req, res);

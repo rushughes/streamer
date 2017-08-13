@@ -45,11 +45,7 @@ module.exports = {
 					sails.log.error("Video.create failed: ", err);
 					return res.negotiate(err);
 				}
-				return res.ok({
-	        files: filesUploaded,
-	        textParams: req.params.all(),
-					video: video
-	      });
+				return res.redirect('/videos');
 	    });
 
 	  });
